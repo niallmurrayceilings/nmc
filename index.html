@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css"/>
 	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
-
+	<link rel="stylesheet" type="text/css" href="css/ekko-lightbox.css"/>
 	
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/ajaxchimp.js"></script>
@@ -25,6 +25,7 @@
 	<script type="text/javascript" src="js/parallax.js"></script>
 	<script type="text/javascript" src="js/nicescroll.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/ekko-lightbox.js.htm.js"></script>
 </head>
 <body>
 	
@@ -49,8 +50,8 @@
 			<nav class="pull-left">
 				<ul class="list-unstyled">
 					<li class="animated wow fadeInLeft" data-wow-delay=".1s"><a href="#app_features">Services</a></li>
-					<li class="animated wow fadeInLeft" data-wow-delay=".2s"><a href="#testimonials">Gallery</a></li>
 					<li class="animated wow fadeInLeft" data-wow-delay="0s"><a href="#about">Projects</a></li>
+					<li class="animated wow fadeInLeft" data-wow-delay=".2s"><a href="#gallery">Gallery</a></li>
 					<li class="animated wow fadeInLeft" data-wow-delay="0s"><a href="#about">About</a></li>
 					<li class="animated wow fadeInLeft" data-wow-delay="0s"><a href="#about">Contact Us</a></li>
 				</ul>
@@ -216,7 +217,36 @@
 	<!--  And App Features Section  -->
 
 
-
+	<section id="gallery">
+		<div class="container">
+			<div class="row">
+				<div class="offset-md-2 col-md-8">
+					<div class="row">
+						<a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+							<img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
+						</a>
+						<a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+							<img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
+						</a>
+						<a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+							<img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
+						</a>
+					</div>
+					<div class="row">
+						<a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+							<img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
+						</a>
+						<a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+							<img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
+						</a>
+						<a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+							<img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
 
@@ -302,7 +332,13 @@
 		<p class="copyright animated wow fadeIn" data-wow-duration="2s">© 2015 <a href="http://pixelhint.com" target="_blank"><strong>Pixelhint.com</strong></a>. All Rights Reserved</p>
 	</footer>
 	<!--  End Footer Section  -->
+<script>
+	$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+		event.preventDefault();
+		$(this).ekkoLightbox();
+	});
 
+</script>
 
 </body>
 </html>
